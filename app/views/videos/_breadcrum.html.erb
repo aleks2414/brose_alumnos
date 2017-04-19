@@ -1,0 +1,18 @@
+    
+<% if current_user.admin? %>
+<div id="tabs">
+	<div class="tab">
+		<a href="<%= videos_path %>" class= "<%= 'active' if current_page?(videos_path) %>"><span class="fa fa-video-camera"></span>Videos</a>
+		<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: "fa fa-times" %>
+	</div>
+</div>
+
+<% else %>
+    <div id="tabs">
+    <div class="tab">
+      <a href="<%= edit_user_registration_path %>" class="tablinks <%= 'active' if current_page?(edit_user_registration_path) %>"><span class="fa fa-user"></span>Mi Perfil</a>
+      <a href="<%= videos_path %>" class= "<%= 'active' if current_page?(videos_path) %>"><span class="fa fa-video-camera"></span>Subir Video</a>
+      <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: "fa fa-times" %>
+    </div>
+    </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Video</h1>
+
+
+<%= render 'breadcrum' %>
+
+
+<% if current_user.admin? %>
+    <% @videos.each do |video| %>
+    <div class="row">
+    <div class="col-md-4 col-sm-6">
+    <div id="cajita">
+    <%= link_to video do %>
+      <h4> <%= video.user.nombre %> </h4>
+      <h5> <%= video.video %></h5>
+    <% end %>
+    </div>
+    </div>
+    </div>
+    <% end %>
+
+<% else %>
+
+<% if current_user.videos.present? %>
+<% @videas.each do |video| %>
+<div class="row">
+<div class="col-md-4 col-sm-6">
+    <div id="cajita">
+    <%= link_to video do %>
+      <h4> <%= video.user.nombre %> </h4>
+      <h5> <%= video.video %></h5>
+    <% end %>
+    </div>
+    </div>
+    </div>
+    <% end %>
+
+<% else %>
+
+
+<%= render 'form' %>
+
+
+<% end %>
+
+<% end %>
+
+
