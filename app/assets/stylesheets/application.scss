@@ -194,3 +194,46 @@ div.tab a:focus, .active {
 		color: white;
 	}
 }
+
+#fondo {
+  .img2 {
+    img {
+      position: fixed;
+      bottom: -12vh;
+      right: -12vh;
+    }
+  }
+
+  .img3 {
+    img {
+      position: fixed;
+      bottom: -4vh;
+      left: -23vh;
+    }
+  }
+
+  .img4 {
+    img {
+      position: fixed;
+      top: -13vh;
+      left: 35vh;
+    }
+  }
+
+  .img5 {
+    img {
+      position: fixed;
+      top: 26vh;
+      left: -5vh;
+    }
+  }
+
+  .img6 {
+    img {
+      position: fixed;
+      top: 40vh;
+      right: -10vh;
+    }
+  }
+
+}
