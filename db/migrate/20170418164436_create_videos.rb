@@ -3,6 +3,7 @@ class CreateVideos < ActiveRecord::Migration
     create_table :videos do |t|
       t.string :video
       t.string :descripcion
+      t.boolean :terminos
       t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
