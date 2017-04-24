@@ -11,12 +11,39 @@
     </div>
   <% end %>
 
+<div class="row">
+  <div id="instrucciones">
+    <p>
+      Graba un video en YouTube de máximo 2:00 minutos, dándonos a conocer los siguientes puntos:
+    </p>
+    <h4 class="red">A:</h4>
+    <p>¿Por qué te interesa participar en Innovation MX?</p>
+
+    <h4 class="red">B:</h4>
+    <p>¿Por qué crees que tú puedes aportar innovación al proyecto?</p>
+
+    <h4 class="red">C:</h4>
+    <p>Menciona un logro significativo (escuela, trabajo, etc)</p>
+
+    <h4 class="red">D:</h4>
+    <p>Para ti, ¿qué es innovación?</p>
+
+    <h4 class="red">E:</h4>
+    <p> ¿Qué piensas del trabajo en equipo?</p>
+
+    <h4 class="red">F:</h4>
+    <p>¿Qué conoces de Brose?</p>
+  </div>
+</div>
+
+<hr>
+
   <div class="field">
-    <%= f.label :video %><br>
+    <%= f.label :link_del_video %><br>
     <%= f.text_field :video, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :descripcion %><br>
+    <%= f.label :consideraciones_especiales %><br>
     <%= f.text_area :descripcion %>
   </div>
 
