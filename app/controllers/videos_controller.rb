@@ -5,7 +5,7 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.where(admin: false)
+    @videos = Video.all
     @videas = current_user.videos
     @video = Video.new
   end
